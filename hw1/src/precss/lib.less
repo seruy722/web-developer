@@ -1,0 +1,39 @@
+.placeholder(@color: #000){
+    &::-webkit-input-placeholder{color: @color;} 
+    &::-moz-placeholder{color: @color;}
+    &:-moz-placeholder{color: @color;}
+    &:-ms-input-placeholder{color: @color;}
+}
+
+.row-flex(){
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col(){
+    margin-left: (@offset / 2);
+    margin-right: (@offset / 2);
+    box-sizing: border-box;
+}
+
+.size(@n){
+    width: ~"calc(100% / 12 * @{n} - @{offset})";
+}
+
+.size-sm(@n){
+    @media screen and (max-width: @break_sm){
+        width: ~"calc(100% / 12 * @{n} - @{offset})";
+    }
+}
+
+.size-xs(@n){
+    .xs-block({
+        width: ~"calc(100% / 12 * @{n} - @{offset})";
+    });
+}
+
+.xs-block(@content){
+    @media screen and (max-width: @break_xs){
+        @content();
+    }
+}

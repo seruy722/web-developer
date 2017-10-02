@@ -1,0 +1,12 @@
+table {
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #2A2A2A;
+  border-bottom: 2px solid #2A2A2A;
+}
+
+table tr td {
+  border: 1px solid #707070;
+  padding: 5px;
+}
+/*# sourceMappingURL=style.css.map */
